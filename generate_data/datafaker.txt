@@ -1,0 +1,3 @@
+datafaker rdb mysql+mysqldb://root:root@localhost:3306/userservicedb userprofile 50000 --meta userprofile.txt --worker 8 --batch 2000
+
+datafaker rdb mysql+mysqldb://root:root@localhost:3306/userservicedb webpages_membership 50000 --meta webpages_Membership.txt --worker 8 --batch 2000

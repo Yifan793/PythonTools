@@ -1,0 +1,11 @@
+DELETE
+FROM
+    userservicedb.userprofile
+WHERE
+    UserId NOT IN ( SELECT user.minid FROM ( SELECT MIN( UserId ) AS minid FROM userservicedb.userprofile GROUP BY UserName ) user )
+
+DELETE
+FROM
+    userservicedb.webpages_roles
+WHERE
+    RoleId NOT IN ( SELECT role.minid FROM ( SELECT MIN( RoleId ) AS minid FROM userservicedb.webpages_roles GROUP BY RoleName ) role )

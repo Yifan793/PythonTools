@@ -1,0 +1,5 @@
+UserId||int||自增id[:inc(id,199981)+(1)]
+UserName||varchar(190)||UserName[:op([:name]+c0)]
+FullName||varchar(190)||FullName[:op(c1)]
+Email||varchar(190)||Email[:email]
+Picture||varchar(190)||Picture[:image_url]

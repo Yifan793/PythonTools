@@ -1,0 +1,347 @@
+Output for EchartsCustomCellType.Server.csproj:
+Initializing and loading extensions...
+Determining supported upgrades...
+                                                                                
+ Selected options                                                               
+
+ Source project     D:\workspace\forguncy2\forguncyjp\Plugin\CustomCellTypes\E  
+                    chartsCustomCellType\EchartsCustomCellType.Server\EchartsC  
+                    ustomCellType.Server.csproj                                 
+ Target framework   .NET 8.0 (Supported until ʮһ, 2026)                     
+ Upgrade type       framework.inplace                                           
+                                                                                
+          
+ Steps    
+
+ Upgrade  
+
+          
+          
+Building project 
+'D:\workspace\forguncy2\forguncyjp\Plugin\CustomCellTypes\EchartsCustomCellType\
+EchartsCustomCellType.Server\EchartsCustomCellType.Server.csproj'...
+Discovering project components to upgrade...
+Starting upgrade of selected nodes for EchartsCustomCellType.Server.csproj...
+Traits
+	{Name=UA, Version=0.5.564.2486}
+	UAExtensibleOperations
+	CPS
+	SdkStyleProject
+	OutputTypeLibrary
+	C#
+	GenerateDocumentationFile
+	RelativePathDerivedDefaultNamespace
+	.NET
+	UseFileGlobs
+	DynamicDependentFile
+	ConfigurableFileNesting
+	DependenciesTree
+	ProjectImportsTree
+	LaunchProfiles
+	NoGeneralDependentFileIcon
+	ProjectPropertyInterception
+	PackageReferences
+	AssemblyReferences
+	ProjectReferences
+	WinRTReferences
+	OutputGroups
+	AllTargetOutputGroups
+	VisualStudioWellKnownOutputGroups
+	SingleFileGenerators
+	DeclaredSourceItems
+	UserSourceItems
+	SupportAvailableItemName
+	IntegratedConsoleDebugging
+	DisableBuiltInDebuggerServices
+	PersistDesignTimeDataOutOfProject
+	COMReferences
+	Publish
+	FolderPublish
+	DataSourceWindow
+	CSharp
+	Managed
+	ClassDesigner
+	SharedProjectReferences
+	ProjectPropertiesEditor
+	SupportsHotReload
+	Pack
+	DotNetCoreRazor
+	DotNetCoreRazorConfiguration
+	WebNestingDefaults
+	SupportsTypeScriptNuGet
+	TypeScript
+	DotNetCoreWeb
+	AspNetCore
+	Web
+	AppServicePublish
+	AspNetCoreInProcessHosting
+	SupportHierarchyContextSvc
+	DynamicFileNesting
+	DynamicFileNestingEnabled
+	LocalUserSecrets
+	net6.0
+	{TargetFramework=.NETCoreApp, 6.0}
+	Cli
+	Inplace
+	FinalizeProjectDependenciesChanges
+	WaitForRestore
+	{Operation=framework}
+	NeedsRestore
+	NeedsBuild
+	ProjectUnloadReload
+Properties
+	CommandSettings = Microsoft.UpgradeAssistant.Cli.Commands.UpgradeCommand+Settings
+	TelemetryEvent = Microsoft.UpgradeAssistant.Services.TelemetryEvent
+	SourceProjectPath = 
+D:\workspace\forguncy2\forguncyjp\Plugin\CustomCellTypes\EchartsCustomCellType\E
+chartsCustomCellType.Server\EchartsCustomCellType.Server.csproj
+	OriginalTraits_D:\workspace\forguncy2\forguncyjp\Plugin\CustomCellTypes\EchartsC
+ustomCellType\EchartsCustomCellType.Server\EchartsCustomCellType.Server.csproj =
+Microsoft.UpgradeAssistant.Traits.TraitsSet
+	Traits = Microsoft.UpgradeAssistant.Traits.TraitsSet
+	SourceProject = EchartsCustomCellType.Server 
+(D:\workspace\forguncy2\forguncyjp\Plugin\CustomCellTypes\EchartsCustomCellType\
+EchartsCustomCellType.Server\EchartsCustomCellType.Server.csproj)
+	UpgradeType = framework.inplace
+	Controller = 
+Microsoft.UpgradeAssistant.Cli.Operations.ProjectFrameworkInplaceController
+	TargetFramework = .NET, 8.0
+	TargetFrameworkName = .NET 8.0 [grey](Supported until ʮһ, 2026)[/]
+	EnvironmentVariablesKey = 
+System.Collections.Generic.Dictionary`2[System.String,System.String]
+	CorrelationIdKey = 30cd4e31-ec70-411b-899c-50911a1ee4a2
+	Nodes = 
+System.Linq.OrderedEnumerable`2[Microsoft.UpgradeAssistant.SliceNode,System.Int3
+2]
+project EchartsCustomCellType.Server.csproj...
+	Microsoft.UpgradeAssistant.Msbuild.Transformers.InplaceDuplicatePackageReference
+Transformer
+	info: Done
+	Microsoft.UpgradeAssistant.Transformers.TargetFrameworkTransformer
+	info: Setting property 'TargetFramework' to 'net8.0' for project 
+'EchartsCustomCellType.Server 
+(D:\workspace\forguncy2\forguncyjp\Plugin\CustomCellTypes\EchartsCustomCellType\
+EchartsCustomCellType.Server\EchartsCustomCellType.Server.csproj)'.
+	info: Done
+Succeeded
+reference.assembly Forguncy.Commands...
+	Microsoft.UpgradeAssistant.Transformers.DefaultAssemblyMapTransformer
+	info: Done
+	Microsoft.UpgradeAssistant.Transformers.AssemblyReferenceInplaceTransformer
+	error: System.IO.DirectoryNotFoundException: Could not find a part of the path 
+'D:\dev\v10Echarts\forguncy\Forguncy.Server2\bin\Forguncy.Commands.dll'.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, 
+FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode 
+mode, FileAccess access, FileShare share, FileOptions options, Int64 
+preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode 
+mode, FileAccess access, FileShare share, FileOptions options, Int64 
+preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, 
+FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 
+preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, 
+FileShare share)
+   at 
+Microsoft.UpgradeAssistant.Services.AssemblyHelper.GetAssemblyAttributeValue(Str
+ing assemblyPath, String attributeType) in 
+D:\a\_work\1\s\src\engine\Services\Project\AssemblyHelper.cs:line 18
+   at 
+Microsoft.UpgradeAssistant.Cli.Slices.Services.Project.ProjectService.GetReferen
+ceTargetFrameworksAsync(String referencePath, CancellationToken 
+cancellationToken) in 
+D:\a\_work\1\s\src\cli\Slices\Services\Project\ProjectService.cs:line 358
+   at 
+Microsoft.UpgradeAssistant.ProjectExtensions.IsCompatibleReferenceAsync(IProject
+project, OperationContext context, String referencePath, CancellationToken 
+cancellationToken) in 
+D:\a\_work\1\s\src\engine\Extensions\ProjectExtensions.cs:line 104
+   at 
+Microsoft.UpgradeAssistant.Transformers.AssemblyReferenceInplaceTransformer.RunA
+sync(OperationContext context, SliceNode node, CancellationToken 
+cancellationToken) in 
+D:\a\_work\1\s\src\engine\Transformers\Assembly\AssemblyReferenceInplaceTransfor
+mer.cs:line 52
+   at 
+Microsoft.UpgradeAssistant.Operations.Operation.RunTransformerAsync(OperationCon
+text context, SliceNode node, Lazy`2 transformer, TelemetryEvent telemetryEvent,
+OperationLogger transformerLogger, CancellationToken cancellationToken) in 
+D:\a\_work\1\s\src\engine\Operations\Operation.cs:line 388
+   at 
+Microsoft.UpgradeAssistant.Operations.Operation.RunNodeTransformersAsync(Operati
+onContext context, SliceNode node, SliceNodeStats nodeStats, CancellationToken 
+cancellationToken) in D:\a\_work\1\s\src\engine\Operations\Operation.cs:line 274
+	info: Done
+Failed
+reference.assembly GrapeCity.Forguncy.Plugin...
+	Microsoft.UpgradeAssistant.Transformers.DefaultAssemblyMapTransformer
+	info: Done
+	Microsoft.UpgradeAssistant.Transformers.AssemblyReferenceInplaceTransformer
+	error: System.IO.DirectoryNotFoundException: Could not find a part of the path 
+'D:\dev\v10Echarts\forguncy\Forguncy.Server2\bin\GrapeCity.Forguncy.Plugin.dll'.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, 
+FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode 
+mode, FileAccess access, FileShare share, FileOptions options, Int64 
+preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode 
+mode, FileAccess access, FileShare share, FileOptions options, Int64 
+preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, 
+FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 
+preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, 
+FileShare share)
+   at 
+Microsoft.UpgradeAssistant.Services.AssemblyHelper.GetAssemblyAttributeValue(Str
+ing assemblyPath, String attributeType) in 
+D:\a\_work\1\s\src\engine\Services\Project\AssemblyHelper.cs:line 18
+   at 
+Microsoft.UpgradeAssistant.Cli.Slices.Services.Project.ProjectService.GetReferen
+ceTargetFrameworksAsync(String referencePath, CancellationToken 
+cancellationToken) in 
+D:\a\_work\1\s\src\cli\Slices\Services\Project\ProjectService.cs:line 358
+   at 
+Microsoft.UpgradeAssistant.ProjectExtensions.IsCompatibleReferenceAsync(IProject
+project, OperationContext context, String referencePath, CancellationToken 
+cancellationToken) in 
+D:\a\_work\1\s\src\engine\Extensions\ProjectExtensions.cs:line 104
+   at 
+Microsoft.UpgradeAssistant.Transformers.AssemblyReferenceInplaceTransformer.RunA
+sync(OperationContext context, SliceNode node, CancellationToken 
+cancellationToken) in 
+D:\a\_work\1\s\src\engine\Transformers\Assembly\AssemblyReferenceInplaceTransfor
+mer.cs:line 52
+   at 
+Microsoft.UpgradeAssistant.Operations.Operation.RunTransformerAsync(OperationCon
+text context, SliceNode node, Lazy`2 transformer, TelemetryEvent telemetryEvent,
+OperationLogger transformerLogger, CancellationToken cancellationToken) in 
+D:\a\_work\1\s\src\engine\Operations\Operation.cs:line 388
+   at 
+Microsoft.UpgradeAssistant.Operations.Operation.RunNodeTransformersAsync(Operati
+onContext context, SliceNode node, SliceNodeStats nodeStats, CancellationToken 
+cancellationToken) in D:\a\_work\1\s\src\engine\Operations\Operation.cs:line 274
+	info: Done
+Failed
+reference.assembly GrapeCity.Forguncy.ServerApi...
+	Microsoft.UpgradeAssistant.Transformers.DefaultAssemblyMapTransformer
+	info: Done
+	Microsoft.UpgradeAssistant.Transformers.AssemblyReferenceInplaceTransformer
+	error: System.IO.DirectoryNotFoundException: Could not find a part of the path 
+'D:\dev\v10Echarts\forguncy\Forguncy.Server2\bin\GrapeCity.Forguncy.ServerApi.dl
+l'.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, 
+FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode 
+mode, FileAccess access, FileShare share, FileOptions options, Int64 
+preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode 
+mode, FileAccess access, FileShare share, FileOptions options, Int64 
+preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, 
+FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 
+preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, 
+FileShare share)
+   at 
+Microsoft.UpgradeAssistant.Services.AssemblyHelper.GetAssemblyAttributeValue(Str
+ing assemblyPath, String attributeType) in 
+D:\a\_work\1\s\src\engine\Services\Project\AssemblyHelper.cs:line 18
+   at 
+Microsoft.UpgradeAssistant.Cli.Slices.Services.Project.ProjectService.GetReferen
+ceTargetFrameworksAsync(String referencePath, CancellationToken 
+cancellationToken) in 
+D:\a\_work\1\s\src\cli\Slices\Services\Project\ProjectService.cs:line 358
+   at 
+Microsoft.UpgradeAssistant.ProjectExtensions.IsCompatibleReferenceAsync(IProject
+project, OperationContext context, String referencePath, CancellationToken 
+cancellationToken) in 
+D:\a\_work\1\s\src\engine\Extensions\ProjectExtensions.cs:line 104
+   at 
+Microsoft.UpgradeAssistant.Transformers.AssemblyReferenceInplaceTransformer.RunA
+sync(OperationContext context, SliceNode node, CancellationToken 
+cancellationToken) in 
+D:\a\_work\1\s\src\engine\Transformers\Assembly\AssemblyReferenceInplaceTransfor
+mer.cs:line 52
+   at 
+Microsoft.UpgradeAssistant.Operations.Operation.RunTransformerAsync(OperationCon
+text context, SliceNode node, Lazy`2 transformer, TelemetryEvent telemetryEvent,
+OperationLogger transformerLogger, CancellationToken cancellationToken) in 
+D:\a\_work\1\s\src\engine\Operations\Operation.cs:line 388
+   at 
+Microsoft.UpgradeAssistant.Operations.Operation.RunNodeTransformersAsync(Operati
+onContext context, SliceNode node, SliceNodeStats nodeStats, CancellationToken 
+cancellationToken) in D:\a\_work\1\s\src\engine\Operations\Operation.cs:line 274
+	info: Done
+Failed
+reference.assembly Newtonsoft.Json...
+	Microsoft.UpgradeAssistant.Transformers.DefaultAssemblyMapTransformer
+	info: Removing assembly reference 'Newtonsoft.Json' from project 
+'D:\workspace\forguncy2\forguncyjp\Plugin\CustomCellTypes\EchartsCustomCellType\
+EchartsCustomCellType.Server\EchartsCustomCellType.Server.csproj'.
+	info: Adding package Newtonsoft.Json 13.0.3 to project 
+D:\workspace\forguncy2\forguncyjp\Plugin\CustomCellTypes\EchartsCustomCellType\E
+chartsCustomCellType.Server\EchartsCustomCellType.Server.csproj.
+	info: Done
+	Microsoft.UpgradeAssistant.Transformers.AssemblyReferenceInplaceTransformer
+	info: Done
+Succeeded
+dependencies.finalizer Finalize project dependencies...
+	Microsoft.UpgradeAssistant.Msbuild.Transformers.ProjectDependenciesFinalizerTran
+sformer
+	info: Upgrading dependencies in project file 
+'D:\workspace\forguncy2\forguncyjp\Plugin\CustomCellTypes\EchartsCustomCellType\
+EchartsCustomCellType.Server\EchartsCustomCellType.Server.csproj'.
+	info: Removing reference 'Newtonsoft.Json' from project file 
+'D:\workspace\forguncy2\forguncyjp\Plugin\CustomCellTypes\EchartsCustomCellType\
+EchartsCustomCellType.Server\EchartsCustomCellType.Server.csproj'.
+	info: Adding package reference 'Newtonsoft.Json' to project file 
+'D:\workspace\forguncy2\forguncyjp\Plugin\CustomCellTypes\EchartsCustomCellType\
+EchartsCustomCellType.Server\EchartsCustomCellType.Server.csproj'.
+	info: Done
+	Microsoft.UpgradeAssistant.Cli.Slices.Transformers.Project.RestoreProjectTransfo
+rmer
+	info: Restoring packages for 
+'D:\workspace\forguncy2\forguncyjp\Plugin\CustomCellTypes\EchartsCustomCellType\
+EchartsCustomCellType.Server\EchartsCustomCellType.Server.csproj' ...
+	info: Done
+	Microsoft.UpgradeAssistant.Cli.Slices.Transformers.Project.BuildProjectTransform
+er
+	info: Building project 
+'D:\workspace\forguncy2\forguncyjp\Plugin\CustomCellTypes\EchartsCustomCellType\
+EchartsCustomCellType.Server\EchartsCustomCellType.Server.csproj'...
+	info: Done
+	Microsoft.UpgradeAssistant.Cli.Slices.Transformers.Project.ReloadProjectTransfor
+mer
+	info: Reloading project...
+	info: Done
+Succeeded
+file.cs EchartsCustomCellTypeMiddleware.cs...
+	Microsoft.UpgradeAssistant.Transformers.Code.CSharp.DefaultAttributeTypeMapTrans
+former
+	info: Done
+	Microsoft.UpgradeAssistant.Transformers.Code.CSharp.DefaultMemberMapTransformer
+	info: Done
+	Microsoft.UpgradeAssistant.Transformers.Code.CSharp.DefaultTypeMapTransformer
+	info: Done
+	Microsoft.UpgradeAssistant.Transformers.Code.CSharp.DefaultTypeMapUsingsTransfor
+mer
+	info: Done
+Succeeded
+file.cs EchartsCustomCellTypeMiddlewareInjector.cs...
+	Microsoft.UpgradeAssistant.Transformers.Code.CSharp.DefaultAttributeTypeMapTrans
+former
+	info: Done
+	Microsoft.UpgradeAssistant.Transformers.Code.CSharp.DefaultMemberMapTransformer
+	info: Done
+	Microsoft.UpgradeAssistant.Transformers.Code.CSharp.DefaultTypeMapTransformer
+	info: Done
+	Microsoft.UpgradeAssistant.Transformers.Code.CSharp.DefaultTypeMapUsingsTransfor
+mer
+	info: Done
+Succeeded
+Complete: 5 succeeded, 3 failed, 0 skipped.
+
+
+

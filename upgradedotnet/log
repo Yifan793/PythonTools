@@ -1,0 +1,369 @@
+commit 7fbb546014e0c59f927e26f08e73b8ec41f0bc6d
+Author: GRAPECITY\ShaySong <Shay.Song@grapecity.com>
+Date:   Wed Dec 6 09:14:56 2023 +0800
+
+    feat(UpgradeToNet8.0): fix .net7 break change
+
+2	2	Forguncy.Server2/Startup.cs
+2	2	Forguncy.UserService2/Startup.cs
+
+commit 827b851762ee383a8feb97043acb563b1296a218
+Author: GRAPECITY\ShaySong <Shay.Song@grapecity.com>
+Date:   Tue Dec 5 15:50:04 2023 +0800
+
+    feat(UpgradeToNet8.0): move VerifyCodeActive project from forguncy-libraries to forguncy
+
+3	3	Cloud/PreDeploy_Debug_Lite.bat
+0	3	VerifyCodeActive/VerifyCodeActive.dll
+31	0	VerifyCodeActive/VerifyCodeActive.sln
+6	0	VerifyCodeActive/VerifyCodeActive/App.config
+59	0	VerifyCodeActive/VerifyCodeActive/Program.cs
+39	0	VerifyCodeActive/VerifyCodeActive/Properties/AssemblyInfo.cs
+112	0	VerifyCodeActive/VerifyCodeActive/ResourceHelper.cs
+83	0	VerifyCodeActive/VerifyCodeActive/VerifyCodeActive.csproj
+77	0	VerifyCodeActive/VerifyCodeActive/VerifyCodeActive.exe.manifest
+21	0	VerifyCodeActive/VerifyCodeActive/packages.config
+22	22	VerifyCodeActive/{ => VerifyCodeActiveBin}/VerifyCodeActive.deps.json
+3	0	VerifyCodeActive/VerifyCodeActiveBin/VerifyCodeActive.dll
+505	505	VerifyCodeActive/{ => VerifyCodeActiveBin}/VerifyCodeActive.dll.config
+0	0	VerifyCodeActive/{ => VerifyCodeActiveBin}/VerifyCodeActive.exe
+-	-	VerifyCodeActive/{ => VerifyCodeActiveBin}/VerifyCodeActive.pdb
+12	12	VerifyCodeActive/{ => VerifyCodeActiveBin}/VerifyCodeActive.runtimeconfig.json
+
+commit eb1b862899140b509d64a9f2810b6641523af84c
+Author: GRAPECITY\ShaySong <Shay.Song@grapecity.com>
+Date:   Tue Dec 5 15:35:50 2023 +0800
+
+    feat(UpgradeToNet8.0): upgrade VerifyCodeActive
+
+2	2	VerifyCodeActive/VerifyCodeActive.deps.json
+2	2	VerifyCodeActive/VerifyCodeActive.dll
+84	120	VerifyCodeActive/VerifyCodeActive.dll.config
+2	2	VerifyCodeActive/VerifyCodeActive.exe
+-	-	VerifyCodeActive/VerifyCodeActive.pdb
+6	2	VerifyCodeActive/VerifyCodeActive.runtimeconfig.json
+
+commit 8cc78787d48b87e07ee7ee4ececc0e4e56e874e3
+Author: GRAPECITY\ShaySong <Shay.Song@grapecity.com>
+Date:   Tue Dec 5 15:28:46 2023 +0800
+
+    feat(UpgradeToNet8.0): fix build problems
+
+2	0	CommonUtilities/ResourceHelper.cs
+2	1	Forguncy.Server2/Common/SubPubHelper.cs
+2	2	Forguncy.Server2/Controllers/ARReportsController.cs
+2	2	Forguncy.Server2/Controllers/File/FileDownloadUploadController.cs
+2	2	Forguncy.Server2/Controllers/Home/HomeController.cs
+1	1	Forguncy.Server2/KatanaMiddleware/ReportsMiddleware.cs
+3	2	Forguncy.UserService2/Common/LoadBalanceSyncOperation.cs
+2	1	Forguncy.UserService2/Controllers/SettingController/LogController.cs
+1	1	Forguncy.UserService2/Forguncy.UserService2.csproj
+1	1	Forguncy.UserService2/ServerManagerCore/DBDataMigrator.cs
+1	1	Forguncy.UserService2/Services/ImportExcel/DataProviders/OrganizationProvider.cs
+2	0	Forguncy.UserService2/Services/ImportExcel/Models/ImportExcelExceptionV2.cs
+7	7	Forguncy.UserService2/Services/RoleService.cs
+2	2	Forguncy/Licenses/VerifyCodeProvider.cs
+2	0	ForguncyDataBaseService/SqlBuilder/FormulaSqlTranslator.cs
+1	1	ForguncyPublishConsole/ForguncyAppToolsConsole.csproj
+5	4	ForguncySecurityProvider/qyWeixinSecurityProvider/DataSchema.cs
+2	0	Plugin/CustomCellTypes/CarouselCellType/Controls/ImagesEditor.xaml.cs
+2	0	Plugin/CustomCellTypes/VideoPlayCellType/Controls/VideosEditor.xaml.cs
+1	1	Plugin/CustomCellTypes/VideoPlayCellType/VideoPlayer.csproj
+18	0	SpreadX/SpreadX.WPF/SpreadX.WPF.UI/SpreadX.WPF.UI(2012).csproj
+
+commit 51f2f70e87de6a6467f3f77b1779003a72b94c45
+Author: GRAPECITY\ShaySong <Shay.Song@grapecity.com>
+Date:   Tue Dec 5 14:18:59 2023 +0800
+
+    feat(UpgradeToNet8.0): upgrade by upgrade-assistant
+
+2	2	BarcodeBuilder/BarCode Core/GrapeCity.BarCode.Core.csproj
+12	12	BarcodeBuilder/BarCodeBuilder/BarCodeBuilder.csproj
+59	68	CloudStorageProvider/AWSS3Provider/AWSS3Provider.csproj
+47	54	CloudStorageProvider/AliyunOSSProvider/AliyunOSSProvider.csproj
+5	14	CloudStorageProvider/BoxProvider/BoxProvider.csproj
+2	5	CloudStorageProvider/CloudStorageProvider/CloudStorageProvider.csproj
+33	35	CloudStorageProvider/CommonUtilities/CloudStorageCommonUtilities.csproj
+3	11	CloudStorageProvider/DropboxProvider/DropboxProvider.csproj
+3	11	CloudStorageProvider/GoogleDriveProvider/GoogleDriveProvider.csproj
+2	7	CloudStorageProvider/HuaweiOBSProvider/HuaweiOBSProvider.csproj
+5	14	CloudStorageProvider/OneDriveProvider/OneDriveProvider.csproj
+2	5	CloudStorageProvider/PackageTool/PackageTool.csproj
+2	7	CloudStorageProvider/QiniuKodoProvider/QiniuKodoProvider.csproj
+2	7	CloudStorageProvider/TencentCOSProvider/TencentCOSProvider.csproj
+75	88	CommonUtilities/CommonUtilities.csproj
+14	17	CommonWrapperDesigner/CommonWrapperDesigner.csproj
+5	7	ConnectionDialog/ConnectionUIDialog/Microsoft.Data.ConnectionUI.Dialog.csproj
+5	9	ConnectionDialog/Microsoft.Data.ConnectionUI.Resources/Microsoft.Data.ConnectionUI.Resources.csproj
+8	10	ConvertAccess/ConvertAccessPackTool/ConvertAccessPackTool.csproj
+143	152	ConvertAccess/ConvertFromAccess/ConvertFromAccess.csproj
+170	173	ConvertAccess/ConvertFromAccess64/ConvertFromAccess64.csproj
+4	7	ConvertAccess/Forguncy.ImportData/Forguncy.ImportData.csproj
+2	5	DataBaseDesigner/DependeciesPackageTool/DependeciesPackageTool.csproj
+2	5	DataBaseDesigner/Forguncy.DatabaseWrapper.Design/Forguncy.DatabaseWrapper.Design.csproj
+8	8	DataBaseWrapper/DataBaseWrapper/DataBaseWrapper.csproj
+3	7	ESDataAccess/ESDataAccess.csproj
+14	14	ErrorInformationCollection/Forguncy.Core/Forguncy.Core.csproj
+21	21	ErrorInformationCollection/Forguncy.Psi.Core/Forguncy.Psi.Core.csproj
+45	49	ErrorInformationCollection/Forguncy.Psi/Forguncy.Psi.csproj
+2	2	ErrorInformationCollection/PsiResource/PsiResource.csproj
+2	2	Forguncy.ARServer.Bin/Forguncy.ARServer.dll
+1	1	Forguncy.ARServer.Bin/Forguncy.ARServer.exe
+-	-	Forguncy.ARServer.Bin/Forguncy.ARServer.pdb
+0	1	Forguncy.ARServer.Bin/Forguncy.ARServer.runtimeconfig.json
+1	1	Forguncy.ARServer.Bin/Forguncy.ARServer.staticwebassets.runtime.json
+2	2	Forguncy.ARServer.Bin/ja/Forguncy.ARServer.resources.dll
+2	2	Forguncy.ARServer.Bin/ko-KR/Forguncy.ARServer.resources.dll
+1	1	Forguncy.ARServer.Bin/zh-CN/Forguncy.ARServer.resources.dll
+13	14	Forguncy.ARServer/Forguncy.ARServer.csproj
+2	5	Forguncy.AppStore/Forguncy.AppStoreWebApi.csproj
+2	5	Forguncy.Collaboration/Forguncy.Collaboration.csproj
+116	119	Forguncy.Doc/Forguncy.Doc.csproj
+2	3	Forguncy.DocMetadata/Forguncy.DocMetadata.csproj
+5	7	Forguncy.Export/Forguncy.Export.csproj
+5	11	Forguncy.LicenseActivationTool/Forguncy.LicenseActivationTool.csproj
+1	1	Forguncy.Permission/Forguncy.Permission.csproj
+1	1	Forguncy.Server2/DesignerResources/ForguncyMobileTest/ForguncyMobileTest.dll
+2	2	Forguncy.Server2/DesignerResources/ForguncyMobileTest/ForguncyMobileTest.exe
+-	-	Forguncy.Server2/DesignerResources/ForguncyMobileTest/ForguncyMobileTest.pdb
+170	177	Forguncy.Server2/Forguncy.Server2.csproj
+131	150	Forguncy.UserService2/Forguncy.UserService2.csproj
+6	6	Forguncy.sln
+288	302	Forguncy/Forguncy.csproj
+2	7	ForguncyARServerUnitTest/ForguncyARServerUnitTest.csproj
+23	26	ForguncyBackupRestore/ForguncyBackupRestore.csproj
+16	20	ForguncyConsole/ForguncyConsole.csproj
+39	44	ForguncyCoreUtils/ForguncyCoreUtilities.csproj
+62	65	ForguncyDataBaseApi/ForguncyDataBaseApi.csproj
+10	13	ForguncyDataBaseService/ForguncyDataBaseService.csproj
+2	5	ForguncyMigrateDatabase/ForguncyMigrateDatabase.csproj
+3	7	ForguncyNotification/ForguncyNotification.csproj
+4	8	ForguncyODataParser/ForguncyOData.csproj
+36	42	ForguncyPublishConsole/ForguncyAppToolsConsole.csproj
+6	6	ForguncyResource/ForguncyResource.csproj
+15	15	ForguncySecurityProvider/ADSecurityProvider/ADSecurityProvider - Backup.csproj
+64	70	ForguncySecurityProvider/ADSecurityProvider/ADSecurityProvider.csproj
+64	69	ForguncySecurityProvider/ADSecurityProviderInDB/ADSecurityProviderInDB.csproj
+40	43	ForguncySecurityProvider/DemoPasswordSecurityProvider/DemoPasswordSecurityProvider.csproj
+30	30	ForguncySecurityProvider/DingTalkSecurityProvider/DingTalkSecurityProvider - Backup.csproj
+51	54	ForguncySecurityProvider/DingTalkSecurityProvider/DingTalkSecurityProvider.csproj
+54	55	ForguncySecurityProvider/ForguncyUserProvider/GrapeCity.Forguncy.SecurityProvider.csproj
+58	63	ForguncySecurityProvider/GCIDSecurityProvider/GCIDSecurityProvider.csproj
+15	15	ForguncySecurityProvider/Office365SecurityProviderNew/Office365SecurityProvider_new - Backup.csproj
+59	64	ForguncySecurityProvider/Office365SecurityProviderNew/Office365SecurityProvider_new.csproj
+61	67	ForguncySecurityProvider/Saml/General/GeneralSamlSecurityProvider/GeneralSamlSecurityProvider.csproj
+4	6	ForguncySecurityProvider/Saml/Lib/Sustainsys.Saml2/Sustainsys.Saml2.csproj
+25	27	ForguncySecurityProvider/ZipSecurityProvider/ZipSecurityProvider.csproj
+36	40	ForguncySecurityProvider/openWeixinSecurityProvider/openWeixinSecurityProvider.csproj
+38	41	ForguncySecurityProvider/qyWeixinSecurityProvider/qyWeixinSecurityProvider.csproj
+52	63	ForguncyServerApi/ForguncyServerApi.csproj
+32	36	ForguncyServerCommon/ForguncyServerCommon.csproj
+24	28	ForguncyServerConsole/ForguncyServerConsole.csproj
+22	24	ForguncyServerLauncher/ForguncyServerLauncher.csproj
+16	18	ForguncyServerServiceConsole/ForguncyServerServiceConsole.csproj
+22	26	ForguncySpecialCultureResource/ForguncySpecialCultureResource.csproj
+27	32	ForguncySqlCondition/ForguncySqlCondition.csproj
+34	41	ForguncyUserServiceConsole/ForguncyUserServiceConsole.csproj
+35	46	ForguncyWorkerService/ForguncyWorkerService.csproj
+11	14	GcExcelBouncyCastle/GcExcelBouncyCastle.csproj
+35	40	GcExcelParser/GcExcelParser.csproj
+23	28	GenerateFormulaFile/GenerateFormulaFile.csproj
+2	7	GitAuthenticationProviders/Atlassian.Bitbucket/Atlassian.Bitbucket.csproj
+4	9	GitAuthenticationProviders/Core.Simplified/Core.Simplified.csproj
+2	7	GitAuthenticationProviders/GitHub/GitHub.csproj
+4	9	GoogleAnalyticsUtilities/GoogleAnalyticsUtilities.csproj
+11	14	Infrastructure/Forguncy.Infrastructure.Abstraction/Forguncy.Infrastructure.Abstraction.csproj
+8	10	Infrastructure/Forguncy.Infrastructure.Cache/Forguncy.Infrastructure.Cache.csproj
+13	16	Infrastructure/Forguncy.Infrastructure.GeneralConfig/Forguncy.Infrastructure.GeneralConfig.csproj
+18	22	Infrastructure/Forguncy.Infrastructure.InvokeService/Forguncy.Infrastructure.InvokeService.csproj
+14	18	Infrastructure/Forguncy.Infrastructure.JsonTypeInfo/Forguncy.Infrastructure.JsonTypeInfo.csproj
+8	10	Infrastructure/Forguncy.Infrastructure.MessageQueue/Forguncy.Infrastructure.MessageQueue.csproj
+8	9	Log/Forguncy.Log.Abstractions/Forguncy.Log.Abstractions.csproj
+17	21	Log/Forguncy.Log.Configurator/Forguncy.Log.Configurator.csproj
+17	22	Log/Forguncy.Log.Core/Forguncy.Log.Core.csproj
+19	23	Log/Forguncy.Log.File/Forguncy.Log.File.csproj
+20	26	Log/Forguncy.Log.InfluxDb.Host/Forguncy.Log.InfluxDb.Host.csproj
+15	19	Log/Forguncy.Log.InfluxDb/Forguncy.Log.InfluxDb.csproj
+19	21	Log/Forguncy.Log.Logger/Forguncy.Log.Logger.csproj
+51	51	ObfuscationAttacher/ObfuscationAttacher.csproj
+2	2	ObfuscationAttacher/ObfuscationAttacher.sln
+1	1	ObfuscationAttacher/bin/ObfuscationAttacher.dll
+1	1	ObfuscationAttacher/bin/ObfuscationAttacher.exe
+-	-	ObfuscationAttacher/bin/ObfuscationAttacher.pdb
+38	39	OfflinePublishTool/OfflinePublishTool.csproj
+2	4	PackageTool/PackageTool.csproj
+11	11	Permission/Forguncy.RbacPermission.Abstractions/Forguncy.RbacPermission.Abstractions.csproj
+3	6	Permission/Forguncy.RbacPermission.Configurator/Forguncy.RbacPermission.Configurator.csproj
+10	14	Permission/Forguncy.RbacPermission.Core/Forguncy.RbacPermission.Core.csproj
+3	7	Permission/Forguncy.RbacPermission.Validator/Forguncy.RbacPermission.Validator.csproj
+33	33	Plugin/CustomCellTypes/BDMapCellType/BDMapCellType - Backup.csproj
+102	102	Plugin/CustomCellTypes/BDMapCellType/BDMapCellType.csproj
+3	3	Plugin/CustomCellTypes/CarouselCellType/CarouselCellType.csproj
+2	2	Plugin/CustomCellTypes/CustomMenu/Forguncy.CustomMenu.sln
+9	12	Plugin/CustomCellTypes/CustomMenu/Forguncy.CustomMenu/Forguncy.CustomMenu.csproj
+26	27	Plugin/CustomCellTypes/EchartsCustomCellType/EchartsCustomCellType.Server/EchartsCustomCellType.Server.csproj
+71	78	Plugin/CustomCellTypes/EchartsCustomCellType/EchartsCustomCellType/EchartsCustomCellType.csproj
+36	39	Plugin/CustomCellTypes/ElevatorMenu/ElevatorMenuCellType.csproj
+34	39	Plugin/CustomCellTypes/FilePreviewer/FilePreviewer.csproj
+8	11	Plugin/CustomCellTypes/Gantt/Gantt.csproj
+9	12	Plugin/CustomCellTypes/H5ScanBarcode/H5ScanBarcode.csproj
+8	11	Plugin/CustomCellTypes/HtmlRichEdtior/HtmlRichEditor.csproj
+6	12	Plugin/CustomCellTypes/ImageEditor/ImageEditor.csproj
+2	2	Plugin/CustomCellTypes/ImageEditor/ImageEditor.sln
+22	20	Plugin/CustomCellTypes/ReportSheet/ReportSheet.Server/ReportSheet.Server.csproj
+90	93	Plugin/CustomCellTypes/ReportSheet/ReportSheet/ReportSheet.csproj
+5	8	Plugin/CustomCellTypes/SelectionPanel/SelectionPanel.csproj
+8	15	Plugin/CustomCellTypes/SignatureCellType/SignatureCellType.csproj
+9	12	Plugin/CustomCellTypes/StarScoringCellType/StarScoringCellType.csproj
+10	13	Plugin/CustomCellTypes/Stepper/Stepper.csproj
+11	18	Plugin/CustomCellTypes/TabManager/TabManager.csproj
+89	101	Plugin/CustomCellTypes/TinyRichEditor/TinyRichEditor.csproj
+12	15	Plugin/CustomCellTypes/VideoPlayCellType/VideoPlayer.csproj
+7	6	Plugin/CustomCellTypes/VideoPlayCellType/VideoPlayer_oqf3rmeq_wpftmp.csproj
+11	15	Plugin/CustomCellTypes/WynIntegration.Server/WynIntegration.Server.csproj
+40	49	Plugin/CustomCellTypes/WynIntegration/WynIntegration.csproj
+22	24	Plugin/CustomCommands/AliPay/AliPay.csproj
+80	86	Plugin/CustomCommands/AliSendSMSCommand/AliSendSMSCommand.csproj
+20	24	Plugin/CustomCommands/ApplicationServerOperationCommand/ApplicationServerOperationCommand.csproj
+12	18	Plugin/CustomCommands/ArrayCommand/ArrayOperateCommand.csproj
+7	9	Plugin/CustomCommands/AutoTestDetectOSInfoCommand/AutoTestDetectOSInfoCommand.csproj
+1	1	Plugin/CustomCommands/BaiduAICommand.WebApi/BaiduAICommand.WebApi.csproj
+4	5	Plugin/CustomCommands/BaiduAICommand/BaiduAICommand.csproj
+72	75	Plugin/CustomCommands/BluetoothPrinterCommand/BluetoothPrinterCommand.csproj
+9	13	Plugin/CustomCommands/CacheOperationCommand/CacheOperationCommand.csproj
+9	15	Plugin/CustomCommands/DingTalkLoginCommand/DingTalkLoginCommand.csproj
+14	15	Plugin/CustomCommands/EncryptDecryptCommand/EncryptDecryptCommand.csproj
+7	8	Plugin/CustomCommands/GetLocationCommand/GetLocationCommand.csproj
+6	10	Plugin/CustomCommands/HttpContextCommand/HttpContextCommand.csproj
+2	2	Plugin/CustomCommands/HttpContextCommand/HttpContextCommand.sln
+12	16	Plugin/CustomCommands/ImageViewerCommand/ImageViewerCommand.csproj
+13	13	Plugin/CustomCommands/ImportExportCSV/ImportExportCSV.csproj
+14	16	Plugin/CustomCommands/JsonDataSource/JsonDataSource.csproj
+12	20	Plugin/CustomCommands/JsonUtilityCommand/JsonUtilityCommand.csproj
+8	14	Plugin/CustomCommands/KdAPICommand/KdAPICommand.csproj
+11	14	Plugin/CustomCommands/LoadingCommand/LoadingCommand.csproj
+14	17	Plugin/CustomCommands/LodashCommand/LodashCommand.csproj
+11	13	Plugin/CustomCommands/LoopPluginCommand/LoopPluginCommand.csproj
+12	15	Plugin/CustomCommands/NotificationToDesktop/NotificationToDesktop.csproj
+20	24	Plugin/CustomCommands/ObjectOperationCommand/ObjectOperationCommand.csproj
+13	19	Plugin/CustomCommands/Office365LoginCommand/Offic365LoginCommand.csproj
+13	19	Plugin/CustomCommands/OpenWeChatCommand/OpenWeChatCommand.csproj
+12	18	Plugin/CustomCommands/OperateFilesCommand/OperateFilesCommand.csproj
+34	30	Plugin/CustomCommands/PDACommand/PDACommand.csproj
+13	16	Plugin/CustomCommands/PassListviewDataCommand/PassListviewDataCommand.csproj
+72	79	Plugin/CustomCommands/PluginAppProtectCommand/PluginAppProtectCommand.csproj
+58	63	Plugin/CustomCommands/PrintPdfToPrinterCommand/PrintPdfToPrinterCommand.csproj
+68	69	Plugin/CustomCommands/QiYueSuoElectronicSignature/QiYueSuoElectronicSignature.csproj
+33	36	Plugin/CustomCommands/RFIDCommand/RFIDCommand.csproj
+8	11	Plugin/CustomCommands/SendDingDingMessagePro/SendDingDingMessagePro.csproj
+14	19	Plugin/CustomCommands/SendDingTalkMessage/SendDingTalkMessage.csproj
+13	19	Plugin/CustomCommands/SendHTTPRequestCommand/SendHTTPRequestCommand.csproj
+12	17	Plugin/CustomCommands/SendWeChatMessage/SendWeChatMessage.csproj
+10	12	Plugin/CustomCommands/SendWorkWeixinMessage/SendWorkWeixinMessagePro.csproj
+11	15	Plugin/CustomCommands/SetCellLocationCommand/SetCellLocationCommand.csproj
+11	11	Plugin/CustomCommands/SetCurrentRowCommand/SetCurrentRowCommand.csproj
+89	93	Plugin/CustomCommands/SetFloatingCellCommand/SetFloatingCellCommand.csproj
+10	11	Plugin/CustomCommands/SetFocusCommand/SetFocusCommand.csproj
+8	9	Plugin/CustomCommands/SetMenuActiveItemCommand/SetMenuActiveItemCommand.csproj
+12	18	Plugin/CustomCommands/SetSubPropertyCommand/SetSubPropertyCommand.csproj
+11	13	Plugin/CustomCommands/SleepCommand/SleepCommand.csproj
+10	11	Plugin/CustomCommands/SmartPhoneCommand/SmartPhoneCommand.csproj
+24	28	Plugin/CustomCommands/StringOperationCommand/StringOperationCommand.csproj
+12	18	Plugin/CustomCommands/TeamsWebHookCommand/TeamsWebHookCommand.csproj
+19	21	Plugin/CustomCommands/TencentSendSMSCommand/TencentSendSMSCommand.csproj
+61	61	Plugin/CustomCommands/TraceProcessStatusCommand/TraceProcessStatusCommand.csproj
+10	16	Plugin/CustomCommands/UserManagementCommands/UserManagementCommands.csproj
+53	64	Plugin/CustomCommands/UserManagementCommandsV2/UserManagementCommandsV2.csproj
+8	9	Plugin/CustomCommands/WaterMark/WaterMark.csproj
+14	19	Plugin/CustomCommands/WebSocketClientCommand/WebSocketClientCommand.csproj
+14	22	Plugin/CustomCommands/WechatPay/WechatPay.csproj
+8	9	Plugin/CustomCommands/WorkflowCommand/WorkflowCommand.csproj
+15	25	Plugin/CustomCommands/qyWechatLoginCommand/qyWechatLoginCommand.csproj
+54	58	Plugin/CustomDataBases/AccessDb/AccessWrapper/AccessWrapper.csproj
+5	9	Plugin/CustomDataBases/AzureSynapse/AzureSynapseWrapperDesigner/AzureSynapseWrapperDesigner.csproj
+3	3	Plugin/CustomDataBases/AzureSynapseDedicated/AzureSynapseDedicatedWrapper/AzureSynapseDedicatedWrapper.csproj
+31	37	Plugin/CustomDataBases/AzureSynapseDedicated/AzureSynapseDedicatedWrapperDesigner/AzureSynapseDedicatedWrapperDesigner.csproj
+5	5	Plugin/CustomDataBases/AzureSynapseServerless/AzureSynapseServerlessWrapper/AzureSynapseServerlessWrapper.csproj
+5	11	Plugin/CustomDataBases/AzureSynapseServerless/AzureSynapseServerlessWrapperDesigner/AzureSynapseServerlessWrapperDesigner.csproj
+43	49	Plugin/CustomDataBases/DaMengDb/DaMengDbWrapper/DaMengDbWrapper - Backup.csproj
+60	67	Plugin/CustomDataBases/DaMengDb/DaMengDbWrapper/DaMengDbWrapper.csproj 都是空格
+38	41	Plugin/CustomDataBases/DaMengDb/DaMengDbWrapperDesigner/DaMengDbWrapperDesigner.csproj
+79	88	Plugin/CustomDataBases/HanaDb/HanaDbWrapper/HanaDbWrapper.csproj
+63	66	Plugin/CustomDataBases/HanaDb/HanaDbWrapperDesigner/HanaDbWrapperDesigner.csproj
+59	67	Plugin/CustomDataBases/KingDb/KingDbWrapper/KingDbWrapper.csproj
+33	41	Plugin/CustomDataBases/MyCatDb/MyCatDbWrapper/MyCatDbWrapper.csproj
+38	43	Plugin/CustomDataBases/MyCatDb/MyCatDbWrapperDesigner/MyCatDbWrapperDesigner.csproj
+60	62	Plugin/CustomDataBases/MySql/MySqlWrapper/MySqlWrapper.csproj
+38	43	Plugin/CustomDataBases/MySql/MysqlWrapperDesigner/MysqlWrapperDesigner.csproj
+54	59	Plugin/CustomDataBases/Odbc/OdbcWrapper/OdbcWrapper.csproj
+41	47	Plugin/CustomDataBases/Odbc/OdbcWrapperDesigner/OdbcWrapperDesigner.csproj
+60	60	Plugin/CustomDataBases/Oracle/OracleWrapper/OracleWrapper.csproj
+37	41	Plugin/CustomDataBases/Oracle/OracleWrapperDesigner/OracleWrapperDesigner.csproj
+23	28	Plugin/CustomDataBases/PostgreSql/PostgreSQLWrapperDesigner/PostgreSQLWrapperDesigner.csproj
+54	60	Plugin/CustomDataBases/PostgreSql/PostgreSqlWrapper/PostgreSqlWrapper.csproj
+57	62	Plugin/CustomDataBases/Snowflake/SnowflakeWrapper/SnowflakeWrapper.csproj
+61	61	Plugin/CustomDataBases/SqlServer/SqlServerWrapper/SqlServerWrapper.csproj
+23	28	Plugin/CustomDataBases/SqlServer/SqlServerWrapperDesigner/SqlServerWrapperDesigner.csproj
+71	74	Plugin/CustomDataBases/Sqlite/SqliteWrapper/SqliteWrapper.csproj
+63	67	Plugin/CustomDataBases/TiberoDb/TiberoDbWrapper/TiberoDbWrapper.csproj
+37	41	Plugin/CustomDataBases/TiberoDb/TiberoDbWrapperDesigner/TiberoDbWrapperDesigner.csproj
+5	6	Plugin/Forguncy.CellTypes.Design/Forguncy.CellTypes.Design.csproj
+31	36	Plugin/Forguncy.CellTypes/Forguncy.CellTypes.csproj
+5	6	Plugin/Forguncy.Commands.Design/Forguncy.Commands.Design.csproj
+28	33	Plugin/Forguncy.Commands/Forguncy.Commands/Forguncy.Commands.csproj
+4	4	Plugin/Forguncy.PlugInCommon/Forguncy.PluginCommon.csproj
+5	6	Plugin/Forguncy.PluginCommon.Design/Forguncy.PluginCommon.Design.csproj
+6	15	ServerDesignerCommon/ServerDesignerCommon.csproj
+38	45	ServerDesignerService/ServerDesignerService.csproj
+183	184	SpreadX/SpreadX.CalcEngine/WPF/CalcEngine/SpreadX.CalcEngine.csproj
+4	4	SpreadX/SpreadX.Excel/WPF/Excel/SpreadX.Excel.csproj
+3	4	SpreadX/SpreadX.Pdf/SpreadX.Pdf.csproj
+3	3	SpreadX/SpreadX.WPF/SpreadX.WPF.Data/SpreadX.WPF.Data(2012).csproj
+4	22	SpreadX/SpreadX.WPF/SpreadX.WPF.UI/SpreadX.WPF.UI(2012).csproj
+5	7	SpreadX/SpreadXDataStandard/SpreadXDataStandard.csproj
+12	14	SpreadXCustomFunctions/SpreadXCustomFunctions.csproj
+2	2	Tools/DatabaseRepairTool/DatabaseRepairTool.sln
+11	14	Tools/DatabaseRepairTool/DatabaseRepairTool/DatabaseRepairTool.csproj
+4	7	Tools/ForguncyMobileTest/ForguncyMobileTest.csproj
+7	9	Tools/SpreadJSUpgradeTool/SpreadJSUpgradeTool.csproj
+10	13	UnitTest/CollaborationTest/CollaborationTest.csproj
+13	16	UnitTest/Common/Common.csproj
+42	46	UnitTest/CommonUtilitiesTest/CommonUtilitiesTest.csproj
+142	145	UnitTest/ConvertAccessUnitTest/ConvertAccessUnitTest.csproj
+86	88	UnitTest/DataAccessUnitTest/DataAccessUnitTest.csproj
+30	34	UnitTest/DataAccessUnitTest_DaMeng/DataAccessUnitTest_DaMeng.csproj
+52	55	UnitTest/DataAccessUnitTest_MySql/DataAccessUnitTest_MySql.csproj
+65	67	UnitTest/DataAccessUnitTest_Odbc/DataAccessUnitTest_Odbc.csproj
+83	88	UnitTest/DataAccessUnitTest_Oracle/DataAccessUnitTest_Oracle.csproj
+52	60	UnitTest/DataAccessUnitTest_PostgreSQL/DataAccessUnitTest_PostgreSQL.csproj
+64	69	UnitTest/DataAccessUnitTest_SqlServer/DataAccessUnitTest_SqlServer.csproj
+29	32	UnitTest/DataAccessUnitTest_Tibero/DataAccessUnitTest_Tibero.csproj
+66	71	UnitTest/DataBaseWrapper/TestAllDbWrapper/TestAllDbWrapper.csproj
+33	36	UnitTest/DataBaseWrapper/TestDaMengWrapper/TestDaMengWrapper.csproj
+31	36	UnitTest/DataBaseWrapper/TestMySqlWrapper/TestMySqlWrapper.csproj
+33	36	UnitTest/DataBaseWrapper/TestOracleWrapper/TestOracleWrapper.csproj
+32	37	UnitTest/DataBaseWrapper/TestPostgresqlWrapper/TestPostgresqlWrapper.csproj
+49	52	UnitTest/DataBaseWrapper/TestSqlServerWrapper/TestSqlServerWrapper.csproj
+61	64	UnitTest/DataBaseWrapper/TestSqliteWrapper/TestSqliteWrapper.csproj
+33	37	UnitTest/DataBaseWrapper/TestTiberoWrapper/TestTiberoWrapper.csproj
+190	191	UnitTest/ExcelStudioDesignerUnitTest/ExcelStudioDesignerUnitTest.csproj
+26	30	UnitTest/Forguncy.Log.TestingData/Forguncy.Log.TestingData.csproj
+20	25	UnitTest/ForguncyLogTest/ForguncyLogTest.csproj
+47	51	UnitTest/ForguncyODataUnitTest/ForguncyODataUnitTest.csproj
+37	42	UnitTest/ForguncyServerTest/ForguncyServerTest.csproj
+35	39	UnitTest/PluginCellTypeTest/PluginCellTypeTest.csproj
+44	47	UnitTest/PluginCommandTest/PluginCommandTest.csproj
+13	16	UnitTest/PluginTest/PluginTest.csproj
+31	36	UnitTest/PublishTest/PublishTest.csproj
+30	35	UnitTest/PublishTestCore/PublishTestCore.csproj
+31	40	UnitTest/RbacPermissionUnitTest/RbacPermissionUnitTest.csproj
+46	51	UnitTest/SXUnitTest/SXUnitTest.csproj
+44	45	UnitTest/UnitTestCommon/UnitTestCommon.csproj
+29	33	UnitTest/UnitTestCommonCore/UnitTestCommonCore.csproj
+54	59	UnitTest/UserServiceTest/UserServiceTest.csproj
+58	63	WPFBase/WPFBase.NetCore.csproj
+2	2	build/GenerateMinifiyConfig/GenerateMinifiyConfig.sln
+2	4	build/UpdateTsConfig/UpdateTsConfig/UpdateTsConfig.csproj
+1	1	build/UpdateTsConfig/UpdateTsConfig/bin/Debug/net6.0/UpdateTsConfig.dll
+2	2	build/UpdateTsConfig/UpdateTsConfig/bin/Debug/net6.0/UpdateTsConfig.exe
+-	-	build/UpdateTsConfig/UpdateTsConfig/bin/Debug/net6.0/UpdateTsConfig.pdb

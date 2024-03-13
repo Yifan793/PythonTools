@@ -1,0 +1,3 @@
+RoleId||int||自增id[:inc(id,2)]
+RoleName||varchar(190)||RoleName[:job]
+Type||int||Type[:int(1, 1)]

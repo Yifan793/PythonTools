@@ -1,0 +1,5 @@
+ID||int||自增id[:inc(id,3)]
+学生||varchar(20)||学生名字[:name]
+Java课时||int||Java课时[:int(0, 100)]
+Android课时||int||Android课时[:int(0, 100)]
+IOS课时||int||IOS课时[:int(0, 100)]

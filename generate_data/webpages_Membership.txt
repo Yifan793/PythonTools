@@ -1,0 +1,7 @@
+UserId||int||id[:inc(id,2)]
+IsConfirmed||int||IsConfirmed[:int(0, 1)]
+PasswordFailuresSinceLastSuccess||int||PasswordFailuresSinceLastSuccess[:int(0, 1)]
+Password||varchar(190)||Password[:password]
+PasswordSalt||varchar(190)||PasswordSalt[:enum('', '')]
+IsEnabled||int||IsEnabled[:int(0, 1)]
+IsMFAEnabled||int||IsMFAEnabled[:int(0, 1)]
