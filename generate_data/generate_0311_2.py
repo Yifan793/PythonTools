@@ -6,9 +6,9 @@ import requests
 fake = Faker("zh_CN")
 
 db = mysql.connector.connect(
-    host="localhost",
-    user="root",
-    password="root",
+    host="xa-dd3-forguncy1",
+    user="shaysong",
+    password="xA123456",
     database="test_0311_2"
 )
 cursor = db.cursor()
@@ -86,5 +86,49 @@ def generate_lianxiren_table():
     db.close()
 
 
+
+def update_kehu_table():
+    update_query_kehu = "UPDATE 客户表 SET FGC_Creator = %s WHERE ID = %s"
+
+    cursor.execute("SELECT ID FROM test_0311_2.客户表")
+    results = cursor.fetchall()
+    kehu_ids = [result[0] for result in results]
+
+    for kehu_id in kehu_ids:
+        user_name = "role2_user" + str(fake.random_int(1, 1000))
+        print(str(kehu_id) + " " + user_name)
+        cursor.execute(update_query_kehu, (user_name, kehu_id))
+
+    # 提交更改
+    db.commit()
+
+    # 关闭连接
+    cursor.close()
+    db.close()
+
+
+def update_lianxiren_table():
+    update_query_lianxiren = "UPDATE 联系人表 SET FGC_Creator = %s WHERE ID = %s"
+
+    cursor.execute("SELECT ID, 客户ID FROM test_0311_2.联系人表")
+    results = cursor.fetchall()
+    lianxiren_ids = [result[0] for result in results]
+    kehu_ids = [result[1] for result in results]
+    i = 0
+    for lianxiren_id in lianxiren_ids:
+        cursor.execute("SELECT FGC_Creator FROM test_0311_2.客户表 WHERE ID = %s", (kehu_ids[i],))
+        user_name = cursor.fetchall()[0][0]
+        print(str(lianxiren_id) + " " + user_name)
+        cursor.execute(update_query_lianxiren, (user_name, lianxiren_id))
+        i = i + 1
+
+    # 提交更改
+    db.commit()
+
+    # 关闭连接
+    cursor.close()
+    db.close()
+
+
 if __name__ == '__main__':
-    generate_lianxiren_table()
+    update_lianxiren_table()

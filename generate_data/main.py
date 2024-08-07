@@ -17,9 +17,9 @@ db_user = mysql.connector.connect(
 )
 cursor_user = db_user.cursor()
 db = mysql.connector.connect(
-    host="localhost",
-    user="root",
-    password="root",
+    host="xa-dd3-forguncy1",
+    user="shaysong",
+    password="xA123456",
     database="formula"
 )
 cursor = db.cursor()
@@ -203,6 +203,34 @@ def generate_business_trip_table():
     db.close()
 
 
+def generate_business_budget_table():
+    insert_query_出差预定表 = "INSERT INTO 出差预定表 (出差ID, 子项目ID, 日期, 起点, 终点, `费用（CNY）`, 是否付款," \
+                              "FGC_Creator, FGC_CreateDate, FGC_LastModifier, FGC_LastModifyDate) VALUES (%s, %s, %s, "\
+                              "%s, %s, %s, %s, %s, %s, %s, %s)"
+
+    cursor.execute("SELECT ID, 申请日期, 出差地点, FGC_Creator, FGC_CreateDate FROM 出差信息表 WHERE 状态 = %s", ("办公室预定",))
+    business_data = cursor.fetchall()
+    business_id_list = [row[0] for row in business_data]
+    data_list = [row[1] for row in business_data]
+    location_list = [row[2] for row in business_data]
+    creator_list = [row[3] for row in business_data]
+    createdate_list = [row[4] for row in business_data]
+
+    i = 0
+    for business_id in business_id_list:
+        cursor.execute(insert_query_出差预定表,
+                       (business_id, fake.random_int(1, 20), data_list[i], "西安", location_list[i], fake.random_int(500, 4000),
+                        fake.random_int(0, 1), creator_list[i], createdate_list[i], creator_list[i], createdate_list[i]))
+        i = i + 1
+
+    # 提交更改
+    db.commit()
+
+    # 关闭连接
+    cursor.close()
+    db.close()
+
+
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    generate_specific_users()
+    generate_business_budget_table()
